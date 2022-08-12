@@ -1,0 +1,86 @@
+ /* test styles css */
+*{
+	margin: 0;
+	padding: 0;
+}
+:root{
+	--test1: red;
+	--test2: blue;
+}
+body{
+	text-align: center;
+	/* background: var(--test2); */
+}
+
+
+
+
+/* burger css */
+.container-burger{
+	height: 40px;
+	width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: black;
+	border-radius: 8px;
+}
+.container-burger-rotate{
+	transition: all 0.5s;
+}
+.burger-line{
+	height: 5px;
+	width: 32px;
+	border-radius: 3px;
+	background: linear-gradient(90deg, white, blue, blue, blue);
+	margin: 4px 0;
+	transition: all 0.5s;
+}
+.burger-rotate{
+	transform: rotate(90deg);
+}
+.toggle-x .line1{
+	transform: rotate(-45deg) translate(-7px, 6px);
+}
+.toggle-x .line2{
+	width: 0;
+	margin-left: 26px;
+}
+.toggle-x .line3{
+	transform: rotate(45deg) translate(-7px, -6px);
+}
+.toggle-color .line1, .toggle-color .line3{
+	animation-name: toggle-color;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes toggle-color{
+	0%{
+		background: linear-gradient(90deg, white, blue, blue, blue);
+	}
+	25%{
+		background: linear-gradient(90deg, blue, blue, blue, white);
+	}
+	50%{
+		background: linear-gradient(90deg, blue, blue, white, white);
+	}
+	75%{
+		background: linear-gradient(90deg, blue, white, white, white);
+	}
+	100%{
+		background: linear-gradient(90deg, white, white, white, white);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
